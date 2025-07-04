@@ -1,0 +1,11 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+poem = "3.1.11"
+poem-openapi = { version = "5.1.15", features = ["swagger-ui"] }
+serde = "1.0.219"
+tokio = { version = "1.45.1", features = ["macros", "rt-multi-thread"] }
+tracing-subscriber = "0.3.19"

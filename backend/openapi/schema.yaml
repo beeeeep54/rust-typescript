@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: Hello World
+  version: '1.0'
+servers:
+- url: http://localhost:3001/api
+tags: []
+paths:
+  /hello:
+    get:
+      parameters:
+      - name: name
+        schema:
+          type: string
+        in: query
+        required: false
+        deprecated: false
+        explode: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/Hello'
+components:
+  schemas:
+    Hello:
+      type: object
+      title: Hello
+      required:
+      - message
+      properties:
+        message:
+          type: string

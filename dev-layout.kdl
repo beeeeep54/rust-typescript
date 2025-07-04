@@ -1,0 +1,10 @@
+layout {
+    pane split_direction="vertical" {
+        pane command="just" {
+            args "backend-dev"
+        }
+        pane command="just" {
+            args "frontend-dev"
+        }
+    }
+}
